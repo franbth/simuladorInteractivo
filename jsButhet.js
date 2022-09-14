@@ -1,4 +1,33 @@
-class producto{
+let vans = document.querySelector('#vans');
+let nike = document.querySelector('#nike');
+let jordan = document.querySelector('#jordan');
+let obj1 = document.querySelector('.objeto1');
+let obj2 = document.querySelector('.objeto2');
+let obj3 = document.querySelector('.objeto3');
+
+vans.addEventListener('click', () => {
+    let descrip1 = document.createElement ("p");
+    descrip1.innerText="Diponible en talles 38, 39, 40, 41 y 42.";
+    obj1.append(descrip1);
+});
+
+nike.addEventListener('click', () => {
+    let descrip2 = document.createElement ("p");
+    descrip2.innerText="Diponible en talles 36, 37, 40 y 42";
+    obj2.append(descrip2);
+});
+
+jordan.addEventListener('click', () => {
+    let descrip3 = document.createElement ("p");
+    descrip3.innerText="Diponible en talles 38, 40, 41 y 43.";
+    obj3.append(descrip3);
+});
+
+
+
+
+
+/* class producto{
     contructor(id, color,precio, stock){
         this.id = id;
         this.modelo = modelo;
@@ -88,4 +117,4 @@ function finCompra(){
         console.log("Zapatilla: " + carritoCompras[i].modelo + ". Cantidad: " + carritoCompras[i].stock)
     }
 }
-
+ */
