@@ -1,28 +1,48 @@
 let vans = document.querySelector('#vans');
 let nike = document.querySelector('#nike');
 let jordan = document.querySelector('#jordan');
+let carro = document.querySelector('#carro');
 let obj1 = document.querySelector('.objeto1');
 let obj2 = document.querySelector('.objeto2');
 let obj3 = document.querySelector('.objeto3');
+let obj4 = document.querySelector('.objeto4');
+
+
+
+let cv=0;
+let cn=0;
+let cj=0;
+
 
 vans.addEventListener('click', () => {
+    cv++;
+    localStorage.setItem('cvans', cv);
     let descrip1 = document.createElement ("p");
-    descrip1.innerText="Diponible en talles 38, 39, 40, 41 y 42.";
+    descrip1.innerText=(localStorage.getItem('cvans') + " articulo agregado/s al carrito.");
     obj1.append(descrip1);
 });
 
 nike.addEventListener('click', () => {
+    cn++;
+    localStorage.setItem('cnike', cn);
     let descrip2 = document.createElement ("p");
-    descrip2.innerText="Diponible en talles 36, 37, 40 y 42";
+    descrip2.innerText=(localStorage.getItem('cnike') + " articulo agregado/s al carrito.");
     obj2.append(descrip2);
 });
 
 jordan.addEventListener('click', () => {
+    cj++;
+    localStorage.setItem('cjordan', cj);
     let descrip3 = document.createElement ("p");
-    descrip3.innerText="Diponible en talles 38, 40, 41 y 43.";
+    descrip3.innerText=(localStorage.getItem('cjordan') + " articulo agregado/s al carrito.");
     obj3.append(descrip3);
 });
 
+carro.addEventListener('click', () => {
+    let descrip4 = document.createElement ("p");
+    descrip4.innerText=(`Carrito: \nVans: ${localStorage.getItem('cvans')}articulo/s.\nNike: ${localStorage.getItem('cnike')}articulo/s.\n Jordan:${localStorage.getItem('cjordan')}articulo/s.`);
+    obj4.append(descrip4);
+});
 
 
 
