@@ -2,6 +2,8 @@ let vans = document.querySelector('#vans');
 let nike = document.querySelector('#nike');
 let jordan = document.querySelector('#jordan');
 let carro = document.querySelector('#carro');
+let compra = document.querySelector('#compra');
+
 let obj1 = document.querySelector('.objeto1');
 let obj2 = document.querySelector('.objeto2');
 let obj3 = document.querySelector('.objeto3');
@@ -43,6 +45,15 @@ carro.addEventListener('click', () => {
     descrip4.innerText=(`Carrito: \nVans: ${localStorage.getItem('cvans')}articulo/s.\nNike: ${localStorage.getItem('cnike')}articulo/s.\n Jordan:${localStorage.getItem('cjordan')}articulo/s.`);
     obj4.append(descrip4);
 });
+
+compra.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Compra exitosa',
+        icon:'success',
+        confirmButtonText: 'Continuar'
+    });
+});
+
 
 
 
