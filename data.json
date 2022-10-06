@@ -1,0 +1,20 @@
+[
+    {
+        "clase":"objeto1",
+        "img":"./img/descarga.jpg",
+        "precio":"VANS $15000",
+        "boton":"vans"
+    },
+    {
+        "clase":"objeto2",
+        "img":"./img/DC9265-100_0.jpg",
+        "precio":"NIKE $25000",
+        "boton":"nike"
+    },
+    {
+        "clase":"objeto1",
+        "img":"./img/6575d51f6b94833016bfaa9f544c9759.jpg",
+        "precio":"JORDAN $40000",
+        "boton":"jordan"
+    }
+]

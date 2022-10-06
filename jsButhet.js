@@ -1,8 +1,31 @@
+const lista = document.querySelector('#lista');
+
+fetch('./data.json')
+    .then (response => response.json())
+    .then(json=> {
+        const posts = json;
+        posts.forEach(post => {
+            const li= document.createElement('li');
+            li.innerHTML= `
+            <div class="${post.clase}">
+            <img src="${post.img} " width="100px >
+            <p class="articulo">${post.precio}</p>
+            <button type="button" id="${post.boton}">Agregar al carrito</button>
+            </div>
+            `;
+            lista.append(li)
+        });
+    })
+
+
+
+
 let vans = document.querySelector('#vans');
 let nike = document.querySelector('#nike');
 let jordan = document.querySelector('#jordan');
 let carro = document.querySelector('#carro');
 let compra = document.querySelector('#compra');
+
 
 let obj1 = document.querySelector('.objeto1');
 let obj2 = document.querySelector('.objeto2');
@@ -14,6 +37,7 @@ let obj4 = document.querySelector('.objeto4');
 let cv=0;
 let cn=0;
 let cj=0;
+
 
 
 vans.addEventListener('click', () => {
